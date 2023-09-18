@@ -37,7 +37,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}
+          tags: ${{ secrets.DOCKER_USERNAME }}:${{ secrets.DOCKER_IMAGE }}
 
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
