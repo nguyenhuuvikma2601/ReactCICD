@@ -1,4 +1,4 @@
-name: deploy
+name: deploy by nhvi
 on:
   push:
     branches: [master]
