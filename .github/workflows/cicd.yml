@@ -37,7 +37,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/my-app
+          tags: ${{ secrets.DOCKER_USERNAME }}/my-app:latest
 
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
